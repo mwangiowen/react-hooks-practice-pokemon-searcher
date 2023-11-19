@@ -1,12 +1,16 @@
+// Search.js
 import React from "react";
+import { Input } from "semantic-ui-react";
 
-function Search() {
+function Search({ searchTerm, onSearchChange }) {
   return (
     <div className="ui search">
-      <div className="ui icon input">
-        <input className="prompt" />
-        <i className="search icon" />
-      </div>
+      <Input
+        icon="search"
+        placeholder="Search Pokemon..."
+        value={searchTerm}
+        onChange={onSearchChange}
+      />
     </div>
   );
 }
